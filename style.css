@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  min-height: calc(100vh - 100px);
+  min-height: 100vh;
   margin: 0;
   letter-spacing: -1px;
 }
@@ -45,7 +45,8 @@ a {
 
 .container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  /* change nav width if you change width here */
+  grid-template-columns: auto 30%;
   grid-template-areas: 
     'main nav'
 }
@@ -56,22 +57,32 @@ a {
 
 /* NAV */
 .nav {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  /* change container column width if you change width here */
+  width: 30%; 
+
+  box-shadow:0 5px 0 rgba(0,0,0,0.1);
+
+
   background: var(--gray);
   grid-area: nav;
-  height: 73vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
-/* .nav ul {
-  list-style-type: none;
-  padding: 0;
-} */
+.nav li, .welcome__contact li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .nav li {
   border-bottom: 1px solid var(--text);
+  height: 80px;
 }
 
 .nav li:last-child {
@@ -86,11 +97,17 @@ a {
 
 .nav a {
   font-size: 4rem;
+  /* font-weight: 500; */
+}
+
+a.bold {
+  /* background: yellow; */
+  font-weight: 600;
 }
 
 /* WELCOME */
 .welcome {
-  height: 73vw;
+  height: 100vh;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   justify-content: center;
@@ -120,10 +137,8 @@ a {
 }
 
 .welcome__contact li {
-  display: flex;
-  align-items: center;
-  height: 60px;
   border-right: 1px solid var(--text);
+  height: 60px;
 }
 
 .welcome__contact li:last-child {
@@ -135,3 +150,63 @@ a {
   margin: 30px;
 }
 
+/* PROJECTS */
+.projects {
+  height: 300vh;
+}
+
+
+
+
+
+/* ABOUT */
+.about {
+  height: 100vh;
+}
+
+
+
+
+
+
+/* MEDIA */
+@media (max-width: 900px){
+  .container {
+    /* change nav width if you change width here */
+    grid-template-columns: auto 25%;
+  }
+
+  .nav {
+    /* change container column width if you change width here */
+    width: 25%; 
+  }
+
+  .nav a {
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 678px){
+  .container {
+    /* change nav width if you change width here */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+      'nav'  
+      'main'
+  }
+
+  .nav {
+    position: relative;
+    right: unset;
+    /* change container column width if you change width here */
+    width: 100%; 
+  
+  
+    /* height: 100vh; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
