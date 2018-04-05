@@ -5,11 +5,6 @@
   --background: #F4F4F4;
   --primary: rgb(247, 83, 23);
   --card: lightgray;
-/* --black: #272727;
-  --text: #4F4F4F;
-  --background: #151A32;
-  --primary: #D05550;
-  --card: #1D233E; */
 }
 
 html {
@@ -76,11 +71,7 @@ nav {
   right: 0;
   /* change container column width if you change width here */
   width: 30%; 
-
   box-shadow:0 5px 0 rgba(0,0,0,0.1);
-
-
-  /* background: var(--card); */
   grid-area: nav;
   height: 100vh;
   display: flex;
@@ -95,8 +86,11 @@ nav li, .welcome__contact li {
 }
 
 nav li {
+  transition: all 0.3s;
   border-bottom: 1px solid var(--text);
   height: 90px;
+  visibility: visible;
+  opacity: 1;
 }
 
 nav li:last-child {
@@ -111,19 +105,25 @@ nav a, .welcome__contact a{
 
 nav a {
   font-size: 4rem;
+  cursor: pointer;
 }
 
 nav a:hover {
-  color: var(--primary);
+  /* color: var(--primary); */
   font-weight: 500;
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 a.nav__menu-item--name {
   font-weight: 600 !important;
+}
+
+a.nav__menu-item--resume {
+  color: var(--primary);
 }
 
 /* WELCOME */
@@ -175,7 +175,6 @@ a.nav__menu-item--name {
 
 .welcome__contact a:hover {
   color: var(--primary);
-  /* font-weight: 500; */
   text-decoration: underline;
 }
 
@@ -184,13 +183,11 @@ a.nav__menu-item--name {
   display: grid;
   background: var(--card);
   margin: 40px 0 80px 5%;
-  
 }
 
 .project__card > * {
   margin: 40px;
 }
-
 
 .project__card > img {
   margin: 30px;
@@ -236,7 +233,6 @@ a.nav__menu-item--name {
   font-weight: 600;
   background: var(--text);
   color: white;
-  /* border: 1px solid var(--card); */
   border-radius: 4px;
 } 
 
@@ -263,8 +259,6 @@ a.nav__menu-item--name {
   padding: 7px; /* needed to fix sizing */
 }
 
-
-
 /* ABOUT */
 .about {
   height: 95vh;
@@ -272,10 +266,8 @@ a.nav__menu-item--name {
 
 .about__card {
   display: grid;
-
   padding: 50px;
   grid-gap: 10px;
-
   grid-template-rows: auto auto auto 1fr;
   margin-top: 120px;
   width: 100%;
@@ -302,7 +294,6 @@ a.nav__menu-item--name {
 .about__description p {
   font-size: 1.8rem;
   font-weight: 600;
-  /* margin: 0; */
 }
 
 .about__description a {
@@ -334,34 +325,6 @@ a.nav__menu-item--name {
   text-decoration: underline;
   margin-bottom: 0.5rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* MEDIA */
@@ -420,9 +383,7 @@ a.nav__menu-item--name {
     font-size: 3.4rem;
   }
 
-
   /* ABOUT */
-
   .about__card {  
     padding: 20px;
   }
@@ -436,5 +397,4 @@ a.nav__menu-item--name {
     font-size: 2.8rem;
     font-weight: 400;
   }
-
 }
