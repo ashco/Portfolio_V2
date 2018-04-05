@@ -1,7 +1,9 @@
+/* MAIN */
 :root {
   --black: #272727;
   --gray: #E0E0E0;
   --text: #4F4F4F;
+  --orange: orangered;
 }
 
 html {
@@ -55,6 +57,10 @@ main {
   grid-area: main;
 }
 
+.card {
+  box-shadow: 5px 5px 10px #888888;
+}
+
 /* NAV */
 nav {
   position: fixed;
@@ -82,7 +88,7 @@ nav li, .welcome__contact li {
 
 nav li {
   border-bottom: 1px solid var(--text);
-  height: 80px;
+  height: 90px;
 }
 
 nav li:last-child {
@@ -99,8 +105,13 @@ nav a {
   font-size: 4rem;
 }
 
-a.bold {
-  font-weight: 600;
+nav a:hover {
+  color: var(--orange);
+  font-weight: 500;
+}
+
+a.nav__menu-item--name {
+  font-weight: 600 !important;
 }
 
 /* WELCOME */
@@ -148,12 +159,17 @@ a.bold {
   margin: 30px;
 }
 
+.welcome__contact a:hover {
+  color: var(--orange);
+  font-weight: 500;
+}
 
 /* PROJECTS */
 .project__card {
   display: grid;
   background: var(--gray);
   margin: 40px 0 80px 5%;
+  
 }
 
 .project__card > * {
@@ -205,9 +221,13 @@ a.bold {
   font-weight: 600;
   background: var(--text);
   color: white;
-  border: 1px solid var(--black);
+  /* border: 1px solid var(--gray); */
   border-radius: 4px;
 } 
+
+.project__links a:hover {
+  background: var(--orange);
+}
 
 .project__tech {
   display: flex;
@@ -236,19 +256,61 @@ a.bold {
 }
 
 .about__card {
+  display: grid;
+
+  padding: 50px;
+  grid-gap: 10px;
+
+  grid-template-rows: auto auto auto 1fr;
   margin-top: 120px;
   width: 100%;
-
   height: 95vh;
   background-color: var(--gray);
+  text-align: center;
 }
 
+.about__card > * {
+  margin: 2rem;
+  margin: 0
+}
 
+.about__title h1 {
+  font-size: 5rem;
+  font-weight: 600;
+}
 
+.about__title h2 {
+  font-size: 3.8rem;
+  font-weight: 400;
+}
 
+.about__description p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  /* margin: 0; */
+}
 
+.about__skills {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 400px;
+}
 
+.about__skills li {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
 
+.about__skills li:first-child {
+  color: var(--orange);
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
 
 
 
@@ -333,6 +395,23 @@ a.bold {
 
   .project__description h3 {
     font-size: 3.4rem;
+  }
+
+
+  /* ABOUT */
+
+  .about__card {  
+    padding: 20px;
+  }
+
+  .about__title h1 {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  
+  .about__title h2 {
+    font-size: 2.8rem;
+    font-weight: 400;
   }
 
 }
