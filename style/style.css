@@ -1,9 +1,15 @@
 /* MAIN */
 :root {
   --black: #272727;
-  --gray: #E0E0E0;
   --text: #4F4F4F;
-  --orange: orangered;
+  --background: #F4F4F4;
+  --primary: rgb(247, 83, 23);
+  --card: lightgray;
+/* --black: #272727;
+  --text: #4F4F4F;
+  --background: #151A32;
+  --primary: #D05550;
+  --card: #1D233E; */
 }
 
 html {
@@ -11,7 +17,8 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 900;
   font-size: 10px;
-  color: var(--black);
+  background: var(--background);
+  color: var(--text);
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
 }
 
@@ -72,7 +79,7 @@ nav {
   box-shadow:0 5px 0 rgba(0,0,0,0.1);
 
 
-  /* background: var(--gray); */
+  /* background: var(--card); */
   grid-area: nav;
   height: 100vh;
   display: flex;
@@ -106,7 +113,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--orange);
+  color: var(--primary);
   font-weight: 500;
 }
 
@@ -126,6 +133,7 @@ a.nav__menu-item--name {
 .welcome__title {
   grid-row: 2 / span 1;
   text-align: center;
+  align-self: end;
 }
 
 .welcome__contact {
@@ -138,6 +146,7 @@ a.nav__menu-item--name {
 
 .welcome__title h2 {
   font-size: 3rem;
+  font-weight: 400;
 }
 
 .welcome__contact ul {
@@ -160,14 +169,15 @@ a.nav__menu-item--name {
 }
 
 .welcome__contact a:hover {
-  color: var(--orange);
-  font-weight: 500;
+  color: var(--primary);
+  /* font-weight: 500; */
+  text-decoration: underline;
 }
 
 /* PROJECTS */
 .project__card {
   display: grid;
-  background: var(--gray);
+  background: var(--card);
   margin: 40px 0 80px 5%;
   
 }
@@ -221,12 +231,12 @@ a.nav__menu-item--name {
   font-weight: 600;
   background: var(--text);
   color: white;
-  /* border: 1px solid var(--gray); */
+  /* border: 1px solid var(--card); */
   border-radius: 4px;
 } 
 
 .project__links a:hover {
-  background: var(--orange);
+  background: var(--primary);
 }
 
 .project__tech {
@@ -265,7 +275,7 @@ a.nav__menu-item--name {
   margin-top: 120px;
   width: 100%;
   min-height: 95vh;
-  background-color: var(--gray);
+  background-color: var(--card);
   text-align: center;
 }
 
@@ -290,6 +300,14 @@ a.nav__menu-item--name {
   /* margin: 0; */
 }
 
+.about__description a {
+  color: var(--primary);
+}
+
+.about__description a:hover {
+  text-decoration: underline;
+}
+
 .about__skills {
   display: flex;
   flex-direction: column;
@@ -305,7 +323,7 @@ a.nav__menu-item--name {
 }
 
 .about__skills li:first-child {
-  color: var(--orange);
+  color: var(--primary);
   font-size: 2rem;
   font-weight: 700;
   text-decoration: underline;
@@ -372,7 +390,7 @@ a.nav__menu-item--name {
 
   nav {
     position: relative;
-    background: var(--gray);
+    background: var(--card);
     right: unset;
     /* change container column width if you change width here */
     width: 100%; 
