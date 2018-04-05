@@ -97,11 +97,9 @@ a {
 
 .nav a {
   font-size: 4rem;
-  /* font-weight: 500; */
 }
 
 a.bold {
-  /* background: yellow; */
   font-weight: 600;
 }
 
@@ -155,6 +153,75 @@ a.bold {
   height: 300vh;
 }
 
+.project__card {
+  display: grid;
+  background: var(--gray);
+  margin-left: 5%;
+}
+
+.project__card > * {
+  margin: 40px;
+}
+
+
+.project__card > img {
+  width: calc(100% - 80px);
+}
+
+.project__info {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 5fr 2fr;
+  margin-top: 0;
+}
+
+.project__description h3 {
+  font-size: 5rem;
+}
+
+.project__description p {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+.project__sidebar {
+  display: grid;
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.project__links a {
+  margin: 5px;
+  padding: 5px;
+  font-size: 2rem;
+  font-weight: 600;
+  background: skyblue;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -170,7 +237,7 @@ a.bold {
 
 
 /* MEDIA */
-@media (max-width: 900px){
+@media (max-width: 1080px){
   .container {
     /* change nav width if you change width here */
     grid-template-columns: auto 25%;
