@@ -141,6 +141,7 @@ a.nav__menu-item--resume, a.welcome__contact-item--resume {
 
 .welcome__contact {
   grid-row: 3 / span 1;
+  justify-self: center;
 }
 
 .welcome__title h1 {
@@ -360,17 +361,12 @@ a.nav__menu-item--resume, a.welcome__contact-item--resume {
 
   nav {
     display: none;
-    /* position: relative;
-    background: var(--card);
-    right: unset;
-    width: 100%; 
-    display: flex; */
   }
 
   .welcome {
-    height: 110vh;
+    height: 100vh;
   }
-  
+
   .welcome__contact ul {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
@@ -429,5 +425,9 @@ a.nav__menu-item--resume, a.welcome__contact-item--resume {
   .about__title h2 {
     font-size: 2.8rem;
     font-weight: 400;
+  }
+
+  .about__skills {
+    height: max-content;
   }
 }
