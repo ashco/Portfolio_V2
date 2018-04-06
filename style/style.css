@@ -1,10 +1,9 @@
 /* MAIN */
 :root {
-  --black: #272727;
   --text: #4F4F4F;
-  --background: #F4F4F4;
-  --primary: rgb(247, 83, 23);
-  --card: lightgray;
+  --background: #FFD29F;
+  --primary: #5994AB;
+  --card: #FFBE75;
 }
 
 html {
@@ -61,7 +60,7 @@ main {
 }
 
 .card {
-  box-shadow: 5px 5px 10px #888888;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 
 /* NAV */
@@ -71,7 +70,7 @@ nav {
   right: 0;
   /* change container column width if you change width here */
   width: 30%; 
-  box-shadow:0 5px 0 rgba(0,0,0,0.1);
+  box-shadow:0 5px 0 rgba(0,0,0,0.2);
   grid-area: nav;
   height: 100vh;
   display: flex;
