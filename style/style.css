@@ -1,14 +1,9 @@
 /* MAIN */
 :root {
-  /* --text: #4F4F4F;
-  --background: #;
-  --primary: #5994AB;
-  --card: #FFBE75; */
-
   --text: #4F4F4F;
   --background: #FFD29F;
   --card: #FFCDA1;
-  --primary: #46BAB5;
+  --primary: rgb(57, 139, 193);
 }
 
 html {
