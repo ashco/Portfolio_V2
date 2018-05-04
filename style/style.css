@@ -1,21 +1,20 @@
 /* MAIN */
 :root {
+    /* --text: #4F4F4F;
+    --background: #FFD29F;
+    --card: #FFCDA1;
+    --primary: rgb(57, 139, 193); */
+
   --text: #CCCCCC;
   --background: #242424;
   --card: #313131;
   --primary: rgb(57, 139, 193);
   --btn-hover: rgb(39, 112, 160);
-
-
-  /* --text: #4F4F4F;
-  --background: #FFD29F;
-  --card: #FFCDA1;
-  --primary: rgb(57, 139, 193); */
 }
 
 html {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
   font-weight: 900;
   font-size: 10px;
   background: var(--background);
