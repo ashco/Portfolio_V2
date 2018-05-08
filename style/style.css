@@ -201,7 +201,7 @@ a.nav__menu-item--resume, a.welcome__contact-item--resume {
 .project__card > img {
   margin: 30px;
   width: calc(100% - 60px);
-  max-height: 540px;
+  max-height: 600px;
   background-size: cover;
 }
 
